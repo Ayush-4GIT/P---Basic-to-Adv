@@ -1,3 +1,4 @@
+# This code if for hard password generator
 import random
 
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -20,6 +21,7 @@ for number in range(0, nr_numbers):
     password.append(random.choice(numbers))
 random.shuffle(password)
 your_password = ""
+
 for total in password:
     your_password += total
 print(f"Your password is: {your_password}")
