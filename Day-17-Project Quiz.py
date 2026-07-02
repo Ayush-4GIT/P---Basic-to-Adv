@@ -1,7 +1,17 @@
-class User:
-    def __init__(self, user_id, username):
-        self.id = user_id
-        self.username = username
 
-user_1 = User("001", "ayush")
-print(user_1.id)
+from Datasets.Day_17.question_model import Question
+from Datasets.Day_17.data import question_data
+from Datasets.Day_17.quiz_brain import QuizBrain
+
+question_bank = []
+
+for question in question_data:
+    question_text = question["text"]
+    question_answer = question["answer"]
+    question = Question(question_text, question_answer)
+    question_bank.append(question)
+
+quiz = QuizBrain(question_bank)
+
+while quiz.still_has_question():
+    quiz.next_question()
